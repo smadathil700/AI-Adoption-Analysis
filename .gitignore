@@ -9,3 +9,7 @@ airflow-webserver.pid
 webserver_config.py
 airflow.cfg
 airflow.db
+dags/dbt/ai_adoption/etc/dbdiagram_definition.txt
+dags/dbt/ai_adoption/etc/jaffle_shop_erd.png
+dags/dbt/ai_adoption/models/docs.md
+dags/dbt/ai_adoption/models/overview.md
