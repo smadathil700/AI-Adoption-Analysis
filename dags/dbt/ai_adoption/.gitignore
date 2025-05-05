@@ -4,6 +4,7 @@ logs/
 **/.DS_Store
 dbt_packages/
 venv/
+etc/
 __pycache__
 .tox/
 /.pytest_cache/

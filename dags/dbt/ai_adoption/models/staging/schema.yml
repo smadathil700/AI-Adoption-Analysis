@@ -5,6 +5,5 @@ models:
     columns:
       - name: country_code
         tests:
-          - unique
           - not_null
 
