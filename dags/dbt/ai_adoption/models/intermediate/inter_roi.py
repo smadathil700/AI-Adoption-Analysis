@@ -11,11 +11,11 @@ def model(dbt, session):
    #convert to pandas
    df_pandas = df.to_pandas()
 
-   #creating a copy with reduced columns
-   df_pandas_reduced = df_pandas.copy()
-#reindex(['country_code','year','company','ai_investment_usd_mm','return_from_ai_usd_mm','industry_code'],axis=1).
-   #convert column headings to lower case for better handling
-   df_pandas_reduced.columns = map(str.lower,df_pandas_reduced.columns)
+   #changing column heading case to lower
+   df_pandas.columns = df_pandas.columns.str.lower()
+   
+   #filtering for fewer columns
+   df_pandas_reduced=df_pandas.filter(items=['country_code','year','company','ai_investment_usd_mm','return_from_ai_usd_mm','industry_code']).copy()
 
    #calculating roi
    df_pandas_reduced['roi_percent'] = ((df_pandas_reduced['return_from_ai_usd_mm']-df_pandas_reduced['ai_investment_usd_mm'])/df_pandas_reduced['ai_investment_usd_mm'])*100
