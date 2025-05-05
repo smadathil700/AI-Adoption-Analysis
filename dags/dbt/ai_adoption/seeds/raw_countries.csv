@@ -1,11 +1,21 @@
 ﻿CountryCode,Country
-US,United States
-CN,China
-UK,United Kingdom
-DE,Germany
-JP,Japan
-IN,India
-FR,France
-CA,Canada
-KR,South Korea
-AU,Australia
+USA,United States
+CHN,China
+GBR,Great Britain
+DEU,Germany
+JPN,Japan
+IND,India
+FRA,France
+CAN,Canada
+KOR,South Korea
+AUS,Australia
+BRA,Brazil
+RUS,Russia
+MEX,Mexico
+ZAF,South Africa
+IDN,Indonesia
+SAU,Saudi Arabia
+SWE,Sweden
+SGP,Singapore
+NLD,Netherlands
+CHE,Switzerland

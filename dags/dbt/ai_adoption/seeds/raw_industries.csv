@@ -5,14 +5,24 @@ FIN,Finance
 HLTH,Healthcare
 ECOM,E-commerce
 INS,Insurance
-ENGY,Energy
-PHRM,Pharmaceuticals
-CSMR,Consumer Goods
-MANF,Manufacturing
+ENER,Energy
+PHARM,Pharmaceuticals
+CONS,Consumer Goods
+MFG,Manufacturing
 AUTO,Automotive
 ELEC,Electronics
 CONG,Conglomerate
 ITSV,IT Services
 TELC,Telecommunications
 INFO,Information
-MINN,Mining
+MINE,Mining
+TELE,Telecommunications
+CHEM,Chemicals
+AERO,Aerospace
+FOOD,Food
+METAL,Metals
+MEDIA,Media
+UTIL,Utilities
+TRAN,Transpport
+REAL,Real estate
+AGRI,Agriculture
