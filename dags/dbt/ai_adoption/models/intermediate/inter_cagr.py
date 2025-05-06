@@ -46,7 +46,7 @@ def model(dbt, session):
    combined_df = initial_df.join(
         final_df,
         initial_df["country_initial"] == final_df["country_final"]
-    )
+    ).distinct()
    
    
    # Calculate CAGR using Snowflake SQL
