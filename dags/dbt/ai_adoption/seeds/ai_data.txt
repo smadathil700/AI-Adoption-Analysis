@@ -999,27 +999,4 @@ CHE,2024,5371,867304,0.52,UBS Group,264,343,FIN
 CHE,2024,5371,867304,0.52,Swatch Group,166,199,CONS
 CHE,2024,5371,867304,0.52,Swiss Re,205,246,FIN
 CHE,2024,5371,867304,0.52,Lonza,225,293,PHARM
-
-
-,'GDP_USD_MM':'gdp_usd_mm','Return_from_AI_USD_MM':'return_from_ai_usd_mm',\
-
-
-result_df = df_cagr_joined.join(
-              roi_df,
-              (df_cagr_joined['company'] == roi_df['company']) & 
-              (df_cagr_joined['year'] == roi_df['year'])
-       ).select(
-       df_cagr_joined['year'].alias('year'),
-       df_cagr_joined['total_ai_investment_usd_mm'], 
-       df_cagr_joined['gdp_usd_mm'],
-       df_cagr_joined['ai_adoption_rate'],
-       df_cagr_joined['company'].alias('company'),
-       df_cagr_joined['ai_investment_usd_mm'],
-       df_cagr_joined['return_from_ai_usd_mm'],
-       df_cagr_joined['industry_code'],
-       df_cagr_joined['country_cagr_percent'],
-       df_cagr_joined['global_avg'],
-       roi_df['roi']
-       )
-
-                                    
+                        
