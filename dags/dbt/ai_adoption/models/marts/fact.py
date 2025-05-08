@@ -35,6 +35,7 @@ def model(dbt,session):
               (df_cagr_joined["company"] == roi_df['"company"']) & 
               (df_cagr_joined["year"] == roi_df['"year"'])
        ).select(
+       df_cagr_joined["country_code"].alias("country_code"),
        df_cagr_joined["year"].alias("year"),
        df_cagr_joined["total_ai_investment_usd_mm"], 
        df_cagr_joined["gdp_usd_mm"],
@@ -45,7 +46,7 @@ def model(dbt,session):
        df_cagr_joined["industry_code"],
        df_cagr_joined["country_cagr_percent"],
        df_cagr_joined["global_avg"],
-       roi_df['"roi"']
+       roi_df['"roi"'].alias("ROI")
        )
 
-   return df_cagr_joined
+   return result_df
