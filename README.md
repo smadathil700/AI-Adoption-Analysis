@@ -19,7 +19,7 @@ Focus is on analysing AI adoption data for past 5 years for several countries. F
 > 5. **Reporting**: PowerBI along with Pandas charts used for creating visualizations
 <br></br>
 
-![img](images\Workflow.png)
+![img](images/workflow.png)
 
 ## Data Modelling
 
@@ -29,7 +29,7 @@ There are three tables in data modelling:
 >
 >2. Dimension tables for countries and industries with data
 
-![img](images\datamodel.png)
+![img](images/datamodel.png)
 
 ## Data Analysis
 
@@ -39,18 +39,18 @@ Supporting visualizations:
 
 >1. CAGR for all countries from 2020-24 showing as average of 25%
 
-![img](images\cagr.png)
+![img](images/cagr.png)
 
 >2. Top 6 industries investment vs return showing positive relation
 
-![img](<images\industries vs return.png>)
+![img](<images/industries vs return.png>)
 
 >3. Correlation between AI investment and adoption rate showing positive
 
-![img](<images\adoption rate vs investment.png>)
+![img](<images/adoption rate vs investment.png>)
 
 >4. Correlation between AI investment and ROI by different industries also positive
 
-![img](images\correlation.png)
+![img](images/correlation.png)
 
 </span>
