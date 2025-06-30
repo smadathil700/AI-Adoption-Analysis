@@ -1,39 +1,122 @@
-# AI Adoption Data Analysis Using DBT (Python), Snowflake, Airflow and PowerBI
-<u> </u>
-<span font-family: Calibri>
-This dbt project focuses on dbt with Python. Does analysis on AI adoption data of various countries for years 2020-24.
-</span>
-## Project overview
-<span font-family: Calibri>
-Focus is on analysing AI adoption data for past 5 years for several countries. For this built an automated data pipeline using:
-<br></br>
+# AI Adoption Analysis Project
 
-> 1.  **Source**: CSV files with real data. (seeds/raw_ai_adoption_data.csv, seeds/raw_countries.csv, seeds/raw_industries.csv)
->
-> 2.  **ELT**: Dbt core has been used for ELT (Extract, Load and Transform) of source data. Since snowflake has been used as warehouse, dbt snowflake is used. Transformations are done using snowpark (intermediate/inter_cagr.py) and pandas (intermediate/inter_roi.py)
->
-> 3. **Orchestration**: Apache airflow implemented using Astronomer and docker has been used for workflow scheduling. (https://www.youtube.com/watch?v=OLXkGB7krGo has been quite helpful for the same)
->
-> 4. **Warehouse**: Used snowflake for data storage
->
-> 5. **Reporting**: PowerBI along with Pandas charts used for creating visualizations
-<br></br>
+This dbt project focuses on analyzing AI adoption data across various countries from 2020-2024, utilizing dbt with Python for comprehensive data transformations and analysis.
 
-![img](images/workflow.png)
+## 🎯 Project Overview
 
-## Data Modelling
+This project analyzes AI adoption trends over the past 5 years across multiple countries using an automated data pipeline. The analysis reveals insights into AI investment patterns, adoption rates, and returns on investment in the artificial intelligence sector.
 
-There are three tables in data modelling:
+## 🏗️ Architecture
 
->1.  Fact table with details about country adoption rate, AI investment USD MM, company investment USD MM, company return USD MM, ROI(%), CAGR(%)
->
->2. Dimension tables for countries and industries with data
+The project implements a modern data stack with the following components:
 
-![img](images/datamodel.png)
+### 1. **Data Sources**
+- **CSV Files**: Real-world AI adoption data stored as dbt seeds
+  - `seeds/raw_ai_adoption_data.csv` - Core AI adoption metrics
+  - `seeds/raw_countries.csv` - Country dimension data
+  - `seeds/raw_industries.csv` - Industry classification data
 
-## Data Analysis
+### 2. **ELT Pipeline**
+- **dbt Core**: Primary tool for Extract, Load, and Transform operations
+- **dbt Snowflake**: Warehouse-specific adapter for Snowflake integration
+- **Python Transformations**:
+  - `intermediate/inter_cagr.py` - CAGR calculations using Snowpark
+  - `intermediate/inter_roi.py` - ROI analysis using Pandas
 
-Analysis show countries are increasing their AI investment on an average by 25% from 2020-24 and shows positive correlation between AI investment and AI return/adoption rate/ROI in all countries.
+### 3. **Orchestration**
+- **Apache Airflow**: Workflow scheduling and management
+- **Astronomer**: Airflow deployment platform
+- **Docker**: Containerized environment for consistent deployments
+- *Reference*: [Helpful YouTube Tutorial](https://www.youtube.com/watch?v=OLXkGB7krGo)
+
+### 4. **Data Warehouse**
+- **Snowflake**: Cloud data warehouse for scalable data storage and processing
+
+### 5. **Visualization & Reporting**
+- **Power BI**: Primary business intelligence tool for dashboards
+- **Pandas Charts**: Python-based visualizations for detailed analysis
+
+![Alt text](images/workflow.png)
+
+## 📊 Data Modeling
+
+The project follows a dimensional modeling approach with:
+
+### Fact Table
+- **AI Adoption Metrics**:
+  - Country adoption rate (%)
+  - AI investment (USD MM)
+  - Company investment (USD MM)
+  - Company return (USD MM)
+  - ROI (%)
+  - CAGR (%)
+
+### Dimension Tables
+- **Countries**: Geographic dimension with country-specific attributes
+- **Industries**: Industry classification and sector information
+
+## 📈 Key Findings
+
+### Investment Growth
+- **25% Average Increase**: Countries are increasing their AI investment by an average of 25% annually from 2020-2024
+
+### Positive Correlations
+Strong positive correlations identified between:
+- AI investment and AI returns
+- AI investment and adoption rates
+- AI investment and ROI across all analyzed countries
+
+## 🚀 Getting Started
+
+### Prerequisites
+- dbt Core installed
+- Snowflake account and credentials
+- Apache Airflow (via Astronomer)
+- Docker
+- Power BI Desktop (for visualizations)
+
+### Setup Instructions
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd ai-adoption-analysis
+   ```
+
+2. **Configure dbt profiles**
+   ```bash
+   dbt profiles.yml
+   # Add your Snowflake credentials
+   ```
+
+3. **Install dependencies**
+   ```bash
+   dbt deps
+   ```
+
+4. **Load seed data**
+   ```bash
+   dbt seed
+   ```
+
+5. **Run transformations**
+   ```bash
+   dbt run
+   ```
+
+6. **Test data quality**
+   ```bash
+   dbt test
+   ```
+
+## 🔍 Analysis Methodology
+
+1. **Data Extraction**: Raw CSV data loaded via dbt seeds
+2. **Data Transformation**: Python-based transformations using Snowpark and Pandas
+3. **Metric Calculation**: CAGR and ROI calculations for trend analysis
+4. **Visualization**: Multi-tool approach using Power BI and Python charts
+
+## 📊 Supporting Visualizations
 
 Supporting visualizations:
 
@@ -53,4 +136,10 @@ Supporting visualizations:
 
 ![img](images/correlation.png)
 
-</span>
+## 📞 Contact
+
+For questions or collaboration opportunities, please reach out via msariga7@gmail.com.
+
+---
+
+*This project demonstrates the power of modern data engineering tools in analyzing AI adoption trends and providing actionable business insights.*
