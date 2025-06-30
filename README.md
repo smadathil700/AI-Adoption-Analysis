@@ -36,7 +36,7 @@ The project implements a modern data stack with the following components:
 - **Power BI**: Primary business intelligence tool for dashboards
 - **Pandas Charts**: Python-based visualizations for detailed analysis
 
-![Alt text](images/workflow.png)
+![img](images/workflow.png)
 
 ## 📊 Data Modeling
 
